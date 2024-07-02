@@ -46,6 +46,10 @@ def similarity():
         return jsonify({'similarity_score': score})
     except Exception as e:
         return jsonify({'error': str(e)}), 400
+    
+@app.route('/', methods=['GET'])
+def hello():
+    return 'Hello'
 
 
 if __name__ == '__main__':
